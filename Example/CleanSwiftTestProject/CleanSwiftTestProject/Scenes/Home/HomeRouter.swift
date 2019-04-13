@@ -24,7 +24,7 @@ typealias HomeRouterInput = HomeRoutingNavigation & HomeDataPassing
 class HomeRouter: BaseRouter, HomeRouterInput {
     
     private struct Segues {
-        static let ShowNextScreenIdentifier = ""
+        static let ShowNextScreenIdentifier = "showChild"
     }
 
     // MARK: - Scene Components
@@ -41,12 +41,13 @@ class HomeRouter: BaseRouter, HomeRouterInput {
     // MARK: Navigation
     
     func showNewScreen() {
-        viewController?.performSegue(withIdentifier: Segues.ShowNextScreenIdentifier, sender: nil)
+        performSegueWithIdentifier(segueId: Segues.ShowNextScreenIdentifier)
     }
     
     // MARK: Passing data
     
     override func passDataToNextScene(segue: UIStoryboardSegue) {
+        super.passDataToNextScene(segue: segue)
         if segue.identifier == Segues.ShowNextScreenIdentifier {
             // Pass Relevant Data
         }

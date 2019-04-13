@@ -16,13 +16,10 @@ struct Home: Models {
     // MARK: - Data definitions
 
     // MARK: - Use cases
-
-    // struct Something {
-    //     struct Request {
-    //     }
-    //     struct Response {
-    //     }
-    //     struct ViewModel {
-    //     }
-    // }
+    struct GetChildNumber {
+        struct Response {
+            let number: String
+        }
+        typealias ViewModel = Response
+    }
 }

@@ -21,12 +21,6 @@ class BaseViewController: UIViewController, DisplayLogic, CleanViewController {
 
     // MARK: - Object Lifecycle
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        baseConfigurator = BaseConfigurator()
-        baseConfigurator?.configure(self)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

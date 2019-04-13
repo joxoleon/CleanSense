@@ -17,7 +17,6 @@ protocol HomeBusinessLogic: BusinessLogic {
 
 protocol HomeDataStore: DataStore {
     // var name: String { get set }
-    var childViewControllerClosingHandler: (DataStore) -> () { get }
 }
 
 class HomeInteractor: BaseInteractor, HomeBusinessLogic, HomeDataStore {
@@ -29,13 +28,19 @@ class HomeInteractor: BaseInteractor, HomeBusinessLogic, HomeDataStore {
     var worker: HomeWorker? {
         return baseWorker as? HomeWorker
     }
-    let childViewControllerClosingHandler: (DataStore) -> () = { childDataStore in
-        // Use 'childDataStore' to extract necessary data from the closing child view controller.
-    }
 
     // MARK: - Properties
     // var name: String
 
+    // MARK: - Receive data from child scene
+
+    override func onBaseChildViewControllerClosing(childDataStore: DataStore) {
+        // Receive data from child data store
+        if let childData = childDataStore as? ChildDataStore, let childNumber = childData.childNumber {
+
+            presenter?.presentChildNumber(Home.GetChildNumber.Response(number: childNumber))
+        }
+    }
 
     // MARK: - Business Logic
 

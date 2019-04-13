@@ -28,7 +28,9 @@ class BaseRouter: RouterInput {
     // MARK: Passing data
 
     func passDataToNextScene(segue: UIStoryboardSegue) {
-        basePreviousSceneReceiveDataClosure = baseDataStore?.onBaseChildViewControllerClosing
+        if let vc = segue.destination as? BaseViewController {
+            vc.baseRouter?.basePreviousSceneReceiveDataClosure = baseDataStore?.onBaseChildViewControllerClosing
+        }
     }
 
     func passDataToPreviousScene() {

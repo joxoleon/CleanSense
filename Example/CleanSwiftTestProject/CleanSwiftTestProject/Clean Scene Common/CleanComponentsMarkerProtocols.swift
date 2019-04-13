@@ -63,6 +63,7 @@ protocol RoutingNavigation: class {
 }
 
 protocol DataPassing: class {
+    var basePreviousSceneReceiveDataClosure: ChildVCClosingHandler? { get set }
     func passDataToPreviousScene()
     func passDataToNextScene(segue: UIStoryboardSegue)
 }

@@ -13,6 +13,7 @@ import UIKit
 
 protocol HomePresentationLogic: PresentationLogic {
     // func presentSomething(_ response: Home.Something.Response)
+    func presentChildNumber(_ response: Home.GetChildNumber.Response)
 }
 
 class HomePresenter: BasePresenter, HomePresentationLogic {
@@ -31,9 +32,9 @@ class HomePresenter: BasePresenter, HomePresentationLogic {
 
     // MARK: - Presentation logic
 
-    // func presentSomething(_ response: Home.Something.Response) {
-    //     viewController?.displaySomething(Home.Something.ViewModel())
-    // }
+    func presentChildNumber(_ response: Home.GetChildNumber.Response) {
+        viewController?.displayChildNumber(response)
+    }
 
     // MARK: - Utility
 

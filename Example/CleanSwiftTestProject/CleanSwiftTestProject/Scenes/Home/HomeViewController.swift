@@ -14,6 +14,7 @@ import UIKit
 
 protocol HomeDisplayLogic: DisplayLogic {
     // func displaySomething(_ viewModel: Home.Something.ViewModel)
+    func displayChildNumber(_ viewModel: Home.GetChildNumber.ViewModel)
 }
 
 class HomeViewController: BaseViewController {
@@ -22,14 +23,24 @@ class HomeViewController: BaseViewController {
     var configurator: HomeConfigurator? {
         return baseConfigurator as? HomeConfigurator
     }
-    var interactor: HomeBusinessLogic?
-    var router: HomeRouterInput?
+    var interactor: HomeBusinessLogic? {
+        return baseInteractor as? HomeBusinessLogic
+    }
+    var router: HomeRouterInput? {
+        return baseRouter as? HomeRouterInput
+    }
 
     // MARK: Properties
     // var isSomething: Bool = true
 
     // Mark: - Outlets
-    //@IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet var childNumberLabel: UILabel!
+
+    // MARK: - Actions
+
+    @IBAction func onGoToChildDidTouchUpInside(_ sender: Any) {
+        router?.showNewScreen()
+    }
 
     // MARK: - Object Lifecycle
     
@@ -50,9 +61,9 @@ extension HomeViewController: HomeDisplayLogic {
 
     // MARK: - Display Logic
 
-    // func displaySomething(_ viewModel: Home.Something.ViewModel) {
-    //     nameTextField.text = viewModel.name
-    // }
+    func displayChildNumber(_ viewModel: Home.GetChildNumber.ViewModel) {
+        childNumberLabel.text = viewModel.number
+    }
 
     // MARK: - Utility Methods
 
