@@ -29,23 +29,23 @@ protocol DisplayLogic: class {
 }
 
 protocol CleanViewController: DisplayLogic {
-    var configurator: ConfiguratorLogic? { get set }
-    var interactor: BusinessLogic? { get set }
-    var router: RouterInput? { get set }
+    var baseConfigurator: ConfiguratorLogic? { get set }
+    var baseInteractor: BusinessLogic? { get set }
+    var baseRouter: RouterInput? { get set }
 }
 
 // MARK: Interactor
 
 protocol DataStore: class {
-    var childViewControllerClosingHandler: ChildVCClosingHandler { get }
+    var baseChildViewControllerClosingHandler: ChildVCClosingHandler { get }
 }
 
 protocol BusinessLogic: class {
 }
 
 protocol Interactor: class {
-    var presenter: PresentationLogic? { get set }
-    var worker: WorkerLogic? { get set }
+    var basePresenter: PresentationLogic? { get set }
+    var baseWorker: WorkerLogic? { get set }
 }
 
 // MARK: Presenter
@@ -54,7 +54,7 @@ protocol PresentationLogic: class {
 }
 
 protocol Presenter: class {
-    var viewController: DisplayLogic? { get set }
+    var baseViewController: DisplayLogic? { get set }
 }
 
 // MARK: Router
@@ -69,9 +69,9 @@ protocol DataPassing: class {
 }
 
 protocol Router: class {
-    var dataStore: DataStore? { get set }
-    var viewController: ViewController? { get set }
-    var previousSceneReceiveDataClosure: ChildVCClosingHandler? { get set }
+    var baseDataStore: DataStore? { get set }
+    var baseViewController: ViewController? { get set }
+    var basePreviousSceneReceiveDataClosure: ChildVCClosingHandler? { get set }
 }
 
 // MARK: Worker

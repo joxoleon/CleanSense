@@ -14,9 +14,9 @@ import UIKit
 class BaseInteractor: BusinessLogic, DataStore {
 
     // MARK: - Scene Component Properties
-    var presenter: PresentationLogic?
-    var worker: WorkerLogic?
-    let childViewControllerClosingHandler: (DataStore) -> () = { childDataStore in
+    var basePresenter: PresentationLogic?
+    var baseWorker: WorkerLogic?
+    let baseChildViewControllerClosingHandler: (DataStore) -> () = { childDataStore in
         // Use 'childDataStore' to extract necessary data from the closing child view controller.
     }
 

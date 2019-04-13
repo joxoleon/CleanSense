@@ -14,56 +14,44 @@ import UIKit
 // Connects View, Interactor, and Presenter
 class BaseConfigurator: ConfiguratorLogic {
 
-// MARK: - Scene Component Properties
-weak var viewController: BaseViewController?
-weak var interactor: BaseInteractor? {
-    didSet {
-        // Set interactor references
-        interactor?.presenter = presenter
-        // Set references to interactor
-        viewController?.interactor = interactor
-        router?.dataStore = interactor
+    // MARK: - Scene Component Properties
+    weak var baseViewController: BaseViewController?
+    weak var baseInteractor: BaseInteractor? {
+        didSet {
+            // Set interactor references
+            baseInteractor?.basePresenter = basePresenter
+            // Set references to interactor
+            baseViewController?.baseInteractor = baseInteractor
+            baseRouter?.baseDataStore = baseInteractor
+        }
     }
-}
-weak var presenter: BasePresenter? {
-    didSet {
-        // Set presenter references
-        presenter?.viewController = viewController
-        // Set references to presenter
-        interactor?.presenter = presenter
+    weak var basePresenter: BasePresenter? {
+        didSet {
+            // Set presenter references
+            basePresenter?.baseViewController = baseViewController
+            // Set references to presenter
+            baseInteractor?.basePresenter = basePresenter
+        }
     }
-}
-weak var router: BaseRouter? {
-    didSet {
-        // Set router references
-        router?.viewController = viewController
-        router?.dataStore = interactor
-        // Set references to router
-        viewController?.router = router
+    weak var baseRouter: BaseRouter? {
+        didSet {
+            // Set router references
+            baseRouter?.baseViewController = baseViewController
+            baseRouter?.baseDataStore = baseInteractor
+            // Set references to router
+            baseViewController?.baseRouter = baseRouter
+        }
     }
-}
-weak var worker: BaseWorker? {
-    didSet {
-        // Set references to worker
-        interactor?.worker = worker
+    weak var baseWorker: BaseWorker? {
+        didSet {
+            // Set references to worker
+            baseInteractor?.baseWorker = baseWorker
+        }
     }
-}
 
-// MARK: - Configuration
+    // MARK: - Configuration
 
-func configure(_ viewController: BaseViewController) {
-    assertionFailure("This method should always be called from the child class, do not call super.configure(_)")
-//    // Instantiate components.
-//    let presenter = BasePresenter()
-//    let worker = BaseWorker()
-//    let interactor = BaseInteractor()
-//    let router = BaseRouter()
-//
-//    // Set configurator variables and connect them.
-//    self.viewController = viewController
-//    self.worker = worker
-//    self.presenter = presenter
-//    self.interactor = interactor
-//    self.router = router
-}
+    func configure(_ viewController: BaseViewController) {
+        assertionFailure("This method should always be called from the child class, do not call super.configure(_)")
+    }
 }

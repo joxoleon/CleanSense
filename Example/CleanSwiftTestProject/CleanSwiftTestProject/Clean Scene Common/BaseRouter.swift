@@ -15,9 +15,9 @@ import UIKit
 class BaseRouter: RouterInput {
 
     // MARK: - Scene Components
-    var dataStore: DataStore?
-    weak var viewController: UIViewController?
-    var previousSceneReceiveDataClosure: ChildVCClosingHandler?
+    var baseDataStore: DataStore?
+    weak var baseViewController: UIViewController?
+    var basePreviousSceneReceiveDataClosure: ChildVCClosingHandler?
 
     // MARK: - Properties
     // var isSomething: Bool = true
@@ -25,20 +25,23 @@ class BaseRouter: RouterInput {
     // MARK: Navigation
     
     func performSegueWithIdentifier(segueId: String) {
-        viewController?.performSegue(withIdentifier: segueId, sender: nil)
+        baseViewController?.performSegue(withIdentifier: segueId, sender: nil)
     }
     
     // MARK: Passing data
 
     func passDataToNextScene(segue: UIStoryboardSegue) {
-//        if segue.identifier == Segues.ShowNextScreenIdentifier {
-//            // Pass Relevant Data
-//        }
+        //        if segue.identifier == Segues.ShowNextScreenIdentifier {
+        //            // Pass Relevant Data
+        //        }
     }
 
     func passDataToPreviousScene() {
-        guard let dataStore = dataStore else { return }
-        previousSceneReceiveDataClosure?(dataStore)
+        guard let dataStore = baseDataStore else {
+            assertionFailure("Not Properly connected")
+            return
+        }
+        basePreviousSceneReceiveDataClosure?(dataStore)
     }
 
     func passClosingHandlerToChildScene(handler: (DataStore) -> ()) {

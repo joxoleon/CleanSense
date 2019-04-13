@@ -15,16 +15,16 @@ import UIKit
 class BaseViewController: UIViewController, DisplayLogic, CleanViewController {
 
     // MARK: - Scene Component Properties
-    var configurator: ConfiguratorLogic?
-    var interactor: BusinessLogic?
-    var router: RouterInput?
+    var baseConfigurator: ConfiguratorLogic?
+    var baseInteractor: BusinessLogic?
+    var baseRouter: RouterInput?
 
     // MARK: - Object Lifecycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        configurator = BaseConfigurator()
-        configurator?.configure(self)
+        baseConfigurator = BaseConfigurator()
+        baseConfigurator?.configure(self)
     }
     
     override func viewDidLoad() {
@@ -36,11 +36,11 @@ class BaseViewController: UIViewController, DisplayLogic, CleanViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if self.isMovingFromParent {
-            router?.passDataToPreviousScene()
+            baseRouter?.passDataToPreviousScene()
         }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        router?.passDataToNextScene(segue: segue)
+        baseRouter?.passDataToNextScene(segue: segue)
     }
 }

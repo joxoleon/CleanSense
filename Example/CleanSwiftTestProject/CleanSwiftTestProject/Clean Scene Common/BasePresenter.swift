@@ -22,7 +22,7 @@ class BasePresenter: BasePresentationLogic {
     }
 
     // MARK: - Scene Component Properties
-    var viewController: DisplayLogic?
+    var baseViewController: DisplayLogic?
 
     // MARK: - Properties
     // var isSomething: Bool = true
