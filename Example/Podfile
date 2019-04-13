@@ -1,0 +1,20 @@
+project 'CleanSwiftTestProject/CleanSwiftTestProject.xcodeproj'
+
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+use_frameworks!
+inhibit_all_warnings!
+
+def pods
+    # Utility pods
+    # Hopefully GCVResponseProcessor will be refactored to not use this and it can be removed once no longer necessary - when there's time.
+    pod 'Alamofire', '~> 4.8'
+end
+
+target 'CleanSwiftTestProject' do
+    pods
+end
+
+target 'CleanSwiftTestProject' do
+    pods
+end
