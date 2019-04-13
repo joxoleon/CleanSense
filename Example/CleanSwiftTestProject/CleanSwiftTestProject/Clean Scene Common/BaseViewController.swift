@@ -29,8 +29,6 @@ class BaseViewController: UIViewController, DisplayLogic, CleanViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Perform initialization of the scene
-        // interactor?.doSomething()
     }
 
     override func viewWillDisappear(_ animated: Bool) {

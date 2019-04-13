@@ -16,22 +16,8 @@ class BaseInteractor: BusinessLogic, DataStore {
     // MARK: - Scene Component Properties
     var basePresenter: PresentationLogic?
     var baseWorker: WorkerLogic?
-    let baseChildViewControllerClosingHandler: (DataStore) -> () = { childDataStore in
+
+    func onBaseChildViewControllerClosing(childDataStore: DataStore) {
         // Use 'childDataStore' to extract necessary data from the closing child view controller.
     }
-
-    // MARK: - Properties
-    // var name: String
-
-
-    // MARK: - Business Logic
-
-    // func doSomething(_ request: Base.Something.Request) {
-    //     worker.doSomeWork()
-    //     presenter?.presentSomething(TestScene.Something.Response())
-    // }
-
-    // MARK: - Utility Methods
-
-    // func isSomethingSomething() -> Bool { return true }
 }

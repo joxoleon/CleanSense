@@ -1,5 +1,5 @@
 //
-//  BaseModels.swift
+//  HomeModels.swift
 //  CleanSwiftTestProject
 //
 //  Created by Jovan on 4/13/19.
@@ -11,5 +11,18 @@
 
 import UIKit
 
-struct Base: Models {
+struct Home: Models {
+
+    // MARK: - Data definitions
+
+    // MARK: - Use cases
+
+    // struct Something {
+    //     struct Request {
+    //     }
+    //     struct Response {
+    //     }
+    //     struct ViewModel {
+    //     }
+    // }
 }

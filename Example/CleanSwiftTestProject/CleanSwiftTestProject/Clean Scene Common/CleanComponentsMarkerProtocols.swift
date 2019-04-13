@@ -37,7 +37,7 @@ protocol CleanViewController: DisplayLogic {
 // MARK: Interactor
 
 protocol DataStore: class {
-    var baseChildViewControllerClosingHandler: ChildVCClosingHandler { get }
+    func onBaseChildViewControllerClosing(childDataStore: DataStore)
 }
 
 protocol BusinessLogic: class {
@@ -65,7 +65,6 @@ protocol RoutingNavigation: class {
 protocol DataPassing: class {
     func passDataToPreviousScene()
     func passDataToNextScene(segue: UIStoryboardSegue)
-    func passClosingHandlerToChildScene(handler: ChildVCClosingHandler)
 }
 
 protocol Router: class {

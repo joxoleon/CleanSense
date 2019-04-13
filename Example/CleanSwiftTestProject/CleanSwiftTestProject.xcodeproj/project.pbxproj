@@ -24,6 +24,13 @@
 		C00BEA9F226219F300B8D94D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BEA98226219F300B8D94D /* BaseViewController.swift */; };
 		C00BEAA0226219F300B8D94D /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BEA99226219F300B8D94D /* BaseInteractor.swift */; };
 		C00BEAA1226219F300B8D94D /* BaseConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BEA9A226219F300B8D94D /* BaseConfigurator.swift */; };
+		C0C6826A22626D5E00509336 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C6826322626D5E00509336 /* HomePresenter.swift */; };
+		C0C6826B22626D5E00509336 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C6826422626D5E00509336 /* HomeWorker.swift */; };
+		C0C6826C22626D5E00509336 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C6826522626D5E00509336 /* HomeRouter.swift */; };
+		C0C6826D22626D5E00509336 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C6826622626D5E00509336 /* HomeModels.swift */; };
+		C0C6826E22626D5E00509336 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C6826722626D5E00509336 /* HomeViewController.swift */; };
+		C0C6826F22626D5E00509336 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C6826822626D5E00509336 /* HomeInteractor.swift */; };
+		C0C6827022626D5E00509336 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C6826922626D5E00509336 /* HomeConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +76,13 @@
 		C00BEA98226219F300B8D94D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C00BEA99226219F300B8D94D /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
 		C00BEA9A226219F300B8D94D /* BaseConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConfigurator.swift; sourceTree = "<group>"; };
+		C0C6826322626D5E00509336 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		C0C6826422626D5E00509336 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
+		C0C6826522626D5E00509336 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		C0C6826622626D5E00509336 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		C0C6826722626D5E00509336 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C0C6826822626D5E00509336 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		C0C6826922626D5E00509336 /* HomeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
 		C904209C2F04963AEED9BE9A /* Pods-CleanSwiftTestProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanSwiftTestProjectTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CleanSwiftTestProjectTests/Pods-CleanSwiftTestProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		EA1E121F8935311392746F2B /* Pods-CleanSwiftTestProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanSwiftTestProjectTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-CleanSwiftTestProjectTests/Pods-CleanSwiftTestProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +200,13 @@
 		C00BEA7E22620ED200B8D94D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C0C6826322626D5E00509336 /* HomePresenter.swift */,
+				C0C6826422626D5E00509336 /* HomeWorker.swift */,
+				C0C6826522626D5E00509336 /* HomeRouter.swift */,
+				C0C6826622626D5E00509336 /* HomeModels.swift */,
+				C0C6826722626D5E00509336 /* HomeViewController.swift */,
+				C0C6826822626D5E00509336 /* HomeInteractor.swift */,
+				C0C6826922626D5E00509336 /* HomeConfigurator.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -434,13 +455,20 @@
 				C00BEA4422620D7100B8D94D /* ViewController.swift in Sources */,
 				C00BEA9B226219F300B8D94D /* BasePresenter.swift in Sources */,
 				C00BEA9E226219F300B8D94D /* BaseModels.swift in Sources */,
+				C0C6826F22626D5E00509336 /* HomeInteractor.swift in Sources */,
 				C00BEA4222620D7100B8D94D /* AppDelegate.swift in Sources */,
+				C0C6827022626D5E00509336 /* HomeConfigurator.swift in Sources */,
 				C00BEA8122620F0600B8D94D /* CleanComponentsMarkerProtocols.swift in Sources */,
+				C0C6826E22626D5E00509336 /* HomeViewController.swift in Sources */,
 				C00BEA9D226219F300B8D94D /* BaseRouter.swift in Sources */,
+				C0C6826D22626D5E00509336 /* HomeModels.swift in Sources */,
+				C0C6826C22626D5E00509336 /* HomeRouter.swift in Sources */,
 				C00BEA9C226219F300B8D94D /* BaseWorker.swift in Sources */,
 				C00BEA9F226219F300B8D94D /* BaseViewController.swift in Sources */,
 				C00BEAA1226219F300B8D94D /* BaseConfigurator.swift in Sources */,
 				C00BEAA0226219F300B8D94D /* BaseInteractor.swift in Sources */,
+				C0C6826B22626D5E00509336 /* HomeWorker.swift in Sources */,
+				C0C6826A22626D5E00509336 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

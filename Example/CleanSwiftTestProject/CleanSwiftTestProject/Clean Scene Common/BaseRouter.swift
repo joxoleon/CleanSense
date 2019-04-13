@@ -19,9 +19,6 @@ class BaseRouter: RouterInput {
     weak var baseViewController: UIViewController?
     var basePreviousSceneReceiveDataClosure: ChildVCClosingHandler?
 
-    // MARK: - Properties
-    // var isSomething: Bool = true
-
     // MARK: Navigation
     
     func performSegueWithIdentifier(segueId: String) {
@@ -31,9 +28,7 @@ class BaseRouter: RouterInput {
     // MARK: Passing data
 
     func passDataToNextScene(segue: UIStoryboardSegue) {
-        //        if segue.identifier == Segues.ShowNextScreenIdentifier {
-        //            // Pass Relevant Data
-        //        }
+        basePreviousSceneReceiveDataClosure = baseDataStore?.onBaseChildViewControllerClosing
     }
 
     func passDataToPreviousScene() {
@@ -41,9 +36,7 @@ class BaseRouter: RouterInput {
             assertionFailure("Not Properly connected")
             return
         }
+        // When closing pass data store to current scene
         basePreviousSceneReceiveDataClosure?(dataStore)
-    }
-
-    func passClosingHandlerToChildScene(handler: (DataStore) -> ()) {
     }
 }
