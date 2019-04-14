@@ -11,7 +11,7 @@
 
 import UIKit
 
-protocol ChildPresentationLogic: PresentationLogic {
+protocol ChildPresentationLogic: EmailValidationPresentationLogic {
 }
 
 class ChildPresenter: BasePresenter, ChildPresentationLogic {

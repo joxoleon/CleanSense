@@ -16,11 +16,12 @@ protocol ChildBusinessLogic: BusinessLogic {
     func childNumberChanged(_ request: Child.ChildNumberChanged.Request)
 }
 
-protocol ChildDataStore: DataStore {
+protocol ChildDataStore: EmailValidationDataStore {
     var childNumber: String? { get set }
 }
 
-class ChildInteractor: BaseInteractor, ChildBusinessLogic, ChildDataStore {
+class ChildInteractor: BaseInteractor, ChildBusinessLogic, ChildDataStore,
+    EmailValidationInteractor {
 
     // MARK: - Scene Component Properties
     var presenter: ChildPresentationLogic? {
@@ -32,6 +33,7 @@ class ChildInteractor: BaseInteractor, ChildBusinessLogic, ChildDataStore {
 
     // MARK: - Properties
     var childNumber: String?
+    var email: String?
 
     // MARK: - Receive data from child scene
 
@@ -44,8 +46,4 @@ class ChildInteractor: BaseInteractor, ChildBusinessLogic, ChildDataStore {
     func childNumberChanged(_ request: Child.ChildNumberChanged.Request) {
         childNumber = request.childNumber
     }
-
-    // MARK: - Utility Methods
-
-    // func isSomethingSomething() -> Bool { return true }
 }

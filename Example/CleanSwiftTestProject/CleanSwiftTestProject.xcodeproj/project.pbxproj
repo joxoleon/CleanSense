@@ -23,6 +23,11 @@
 		C00BEA9F226219F300B8D94D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BEA98226219F300B8D94D /* BaseViewController.swift */; };
 		C00BEAA0226219F300B8D94D /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BEA99226219F300B8D94D /* BaseInteractor.swift */; };
 		C00BEAA1226219F300B8D94D /* BaseConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BEA9A226219F300B8D94D /* BaseConfigurator.swift */; };
+		C058FFED2263370F001D2471 /* EmailValidationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058FFE62263370F001D2471 /* EmailValidationPresenter.swift */; };
+		C058FFEE2263370F001D2471 /* EmailValidationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058FFE72263370F001D2471 /* EmailValidationWorker.swift */; };
+		C058FFF02263370F001D2471 /* EmailValidationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058FFE92263370F001D2471 /* EmailValidationModels.swift */; };
+		C058FFF12263370F001D2471 /* EmailValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058FFEA2263370F001D2471 /* EmailValidationViewController.swift */; };
+		C058FFF22263370F001D2471 /* EmailValidationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058FFEB2263370F001D2471 /* EmailValidationInteractor.swift */; };
 		C0C6826A22626D5E00509336 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C6826322626D5E00509336 /* HomePresenter.swift */; };
 		C0C6826B22626D5E00509336 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C6826422626D5E00509336 /* HomeWorker.swift */; };
 		C0C6826C22626D5E00509336 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C6826522626D5E00509336 /* HomeRouter.swift */; };
@@ -81,6 +86,11 @@
 		C00BEA98226219F300B8D94D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C00BEA99226219F300B8D94D /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
 		C00BEA9A226219F300B8D94D /* BaseConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConfigurator.swift; sourceTree = "<group>"; };
+		C058FFE62263370F001D2471 /* EmailValidationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationPresenter.swift; sourceTree = "<group>"; };
+		C058FFE72263370F001D2471 /* EmailValidationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationWorker.swift; sourceTree = "<group>"; };
+		C058FFE92263370F001D2471 /* EmailValidationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationModels.swift; sourceTree = "<group>"; };
+		C058FFEA2263370F001D2471 /* EmailValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationViewController.swift; sourceTree = "<group>"; };
+		C058FFEB2263370F001D2471 /* EmailValidationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationInteractor.swift; sourceTree = "<group>"; };
 		C0C6826322626D5E00509336 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		C0C6826422626D5E00509336 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
 		C0C6826522626D5E00509336 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -227,7 +237,16 @@
 		C00BEA7F22620EEA00B8D94D /* Clean Scene Common */ = {
 			isa = PBXGroup;
 			children = (
+				C058FFE5226336AE001D2471 /* Functional Protocols */,
+				C058FFE4226336A3001D2471 /* Base */,
 				C00BEA8022620F0600B8D94D /* CleanComponentsMarkerProtocols.swift */,
+			);
+			path = "Clean Scene Common";
+			sourceTree = "<group>";
+		};
+		C058FFE4226336A3001D2471 /* Base */ = {
+			isa = PBXGroup;
+			children = (
 				C00BEA94226219F300B8D94D /* BasePresenter.swift */,
 				C00BEA95226219F300B8D94D /* BaseWorker.swift */,
 				C00BEA96226219F300B8D94D /* BaseRouter.swift */,
@@ -235,7 +254,19 @@
 				C00BEA99226219F300B8D94D /* BaseInteractor.swift */,
 				C00BEA9A226219F300B8D94D /* BaseConfigurator.swift */,
 			);
-			path = "Clean Scene Common";
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C058FFE5226336AE001D2471 /* Functional Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C058FFE62263370F001D2471 /* EmailValidationPresenter.swift */,
+				C058FFE72263370F001D2471 /* EmailValidationWorker.swift */,
+				C058FFE92263370F001D2471 /* EmailValidationModels.swift */,
+				C058FFEA2263370F001D2471 /* EmailValidationViewController.swift */,
+				C058FFEB2263370F001D2471 /* EmailValidationInteractor.swift */,
+			);
+			path = "Functional Protocols";
 			sourceTree = "<group>";
 		};
 		C0C6827F226278B800509336 /* Child */ = {
@@ -478,12 +509,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C058FFF12263370F001D2471 /* EmailValidationViewController.swift in Sources */,
 				C00BEA4422620D7100B8D94D /* ViewController.swift in Sources */,
 				C0C682B722627A0700509336 /* ChildConfigurator.swift in Sources */,
 				C00BEA9B226219F300B8D94D /* BasePresenter.swift in Sources */,
+				C058FFF02263370F001D2471 /* EmailValidationModels.swift in Sources */,
 				C0C6826F22626D5E00509336 /* HomeInteractor.swift in Sources */,
 				C0C682B122627A0700509336 /* ChildPresenter.swift in Sources */,
 				C0C682B422627A0700509336 /* ChildModels.swift in Sources */,
+				C058FFEE2263370F001D2471 /* EmailValidationWorker.swift in Sources */,
 				C0C682B222627A0700509336 /* ChildWorker.swift in Sources */,
 				C00BEA4222620D7100B8D94D /* AppDelegate.swift in Sources */,
 				C0C6827022626D5E00509336 /* HomeConfigurator.swift in Sources */,
@@ -498,6 +532,8 @@
 				C00BEA9F226219F300B8D94D /* BaseViewController.swift in Sources */,
 				C00BEAA1226219F300B8D94D /* BaseConfigurator.swift in Sources */,
 				C00BEAA0226219F300B8D94D /* BaseInteractor.swift in Sources */,
+				C058FFF22263370F001D2471 /* EmailValidationInteractor.swift in Sources */,
+				C058FFED2263370F001D2471 /* EmailValidationPresenter.swift in Sources */,
 				C0C6826B22626D5E00509336 /* HomeWorker.swift in Sources */,
 				C0C6826A22626D5E00509336 /* HomePresenter.swift in Sources */,
 				C0C682B322627A0700509336 /* ChildRouter.swift in Sources */,
