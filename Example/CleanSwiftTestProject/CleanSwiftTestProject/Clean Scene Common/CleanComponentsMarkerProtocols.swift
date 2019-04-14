@@ -3,7 +3,7 @@
 //  TemplatesTest
 //
 //  Created by Jovan Radivojsa on 4/12/19.
-//  Copyright © 2019 LotusFlare.inc. All rights reserved.
+//  Copyright © 2019 Jovan Radivojsa. All rights reserved.
 //
 
 import Foundation
@@ -41,6 +41,8 @@ protocol DataStore: class {
 }
 
 protocol BusinessLogic: class {
+    func businessLogicOnViewDidLoad()
+    func businessLogicOnViewWillAppear()
 }
 
 protocol Interactor: class {

@@ -1,8 +1,8 @@
 ////  CleanSwiftTestProjectTests.swift
 //  CleanSwiftTestProjectTests
 //
-//  Created by Dejan on 4/13/19.
-//  Copyright © 2019 Jovan. All rights reserved. Dejan Borojevic
+//  Created by Jovan Radivojsa on 4/13/19.
+//  Copyright © 2019 Jovan. All rights reserved Jovan Radivojsa
 //
 
 import XCTest
